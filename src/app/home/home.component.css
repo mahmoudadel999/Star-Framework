@@ -1,0 +1,30 @@
+.img-home {
+  width: 250px;
+}
+
+.icon-star {
+  position: relative;
+  width: fit-content;
+}
+
+.icon-star::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%);
+  height: 5px;
+  width: 100px;
+  background-color: #00ffae;
+}
+
+.icon-star::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
+  height: 5px;
+  width: 100px;
+  background-color: #00ffae;
+}
