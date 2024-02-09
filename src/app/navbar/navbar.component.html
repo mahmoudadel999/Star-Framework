@@ -1,6 +1,11 @@
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark bg-navbar fixed-top">
+<nav
+  class="navbar navbar-expand-lg bg-navbar fixed-top"
+  [ngClass]="scrolled ? 'scrolled' : ''"
+>
   <div class="container">
-    <a class="navbar-brand text-uppercase fs-2 fw-bold" [routerLink]="['']"
+    <a
+      class="navbar-brand text-uppercase fs-3 fw-bold text-white"
+      [routerLink]="['']"
       >start framework</a
     >
     <button

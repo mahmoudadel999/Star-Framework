@@ -3,10 +3,6 @@
   width: fit-content;
 }
 
-.deteails {
-  min-width: 600px;
-}
-
 .icon-star::before {
   content: "";
   position: absolute;
@@ -59,4 +55,34 @@
 
 .input input:focus::placeholder {
   color: #ffffff;
+}
+
+input ::placeholder {
+  transition: top 400ms;
+}
+
+.top {
+  top: 40px;
+}
+
+label {
+  transition: top 0.5s;
+}
+
+@media (min-width: 500px) {
+  .form {
+    width: 450px;
+  }
+}
+
+@media (min-width: 575px) {
+  .form {
+    width: 550px;
+  }
+}
+
+@media (min-width: 768px) {
+  .form {
+    width: 700px;
+  }
 }

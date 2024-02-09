@@ -5,46 +5,57 @@
       <i class="fa-solid fa-star"></i>
     </div>
 
-    <div class="container text-start mt-5">
-      <div class="input">
+    <div class="container text-start my-5 form">
+      <div class="input-grp">
+        <label class="position-relative" [ngClass]="userName ? 'top-0' : 'top'"
+          >UserName:</label
+        >
         <input
-          class="form-control mb-4"
+          [(ngModel)]="userName"
           type="text"
-          placeholder="userName"
-          id="userName"
+          placeholder="UserName"
+          class="form-control border-0 my-2 border-bottom position-relative shadow-none"
         />
-        <label for="userName">userName</label>
       </div>
-      <div class="input">
+      <div class="input-grp">
+        <label class="position-relative" [ngClass]="userAge ? 'top-0' : 'top'"
+          >UserAge:</label
+        >
         <input
-          class="form-control mb-4"
+          [(ngModel)]="userAge"
           type="number"
-          placeholder="userAge"
-          id="userAge"
+          placeholder="UserAge"
+          class="form-control border-0 my-2 border-bottom position-relative shadow-none"
         />
-        <label for="userAge">userAge</label>
       </div>
 
-      <div class="input">
+      <div class="input-grp">
+        <label class="position-relative" [ngClass]="userEmail ? 'top-0' : 'top'"
+          >UserEmail:</label
+        >
         <input
-          class="form-control mb-4"
-          type="email"
-          placeholder="userEmail"
-          id="userEmail"
+          [(ngModel)]="userEmail"
+          type="number"
+          placeholder="UserEmail"
+          class="form-control border-0 my-2 border-bottom position-relative shadow-none"
         />
-        <label for="userEmail">userEmail</label>
       </div>
-      <div class="input">
+
+      <div class="input-grp">
+        <label
+          class="position-relative"
+          [ngClass]="userPassord ? 'top-0' : 'top'"
+          >UserPassword:</label
+        >
         <input
-          class="form-control mb-4"
+          [(ngModel)]="userPassord"
           type="password"
-          placeholder="userPassword"
-          id="userPassword"
+          placeholder="UserPassword"
+          class="form-control border-0 my-2 border-bottom position-relative shadow-none"
         />
-        <label for="userPassword">userPassword</label>
       </div>
 
-      <div class="text-start">
+      <div class="text-start mt-4">
         <button class="btn btn-success text-capitalize">message</button>
       </div>
     </div>

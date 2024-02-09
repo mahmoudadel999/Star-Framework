@@ -6,3 +6,20 @@
   background-color: #00ffae;
   border-radius: 0.625rem;
 }
+
+.nav-link {
+  color: white;
+  display: inline-block;
+}
+
+.bg-second {
+  background-color: #1abc9c;
+}
+
+nav {
+  transition: all 0.5s;
+}
+
+.navbar.scrolled {
+  padding: 20px;
+}

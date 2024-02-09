@@ -1,93 +1,34 @@
 <div
   class="content-portfolio p-5 position-relative d-flex justify-content-center align-items-center"
 >
-  <div class="deteails text-center text-white py-5">
+  <div class="deteails text-center text-white">
     <p class="text-uppercase fw-bold fs-2 mb-1">portfolio component</p>
     <div class="icon-star mx-auto py-1">
       <i class="fa-solid fa-star"></i>
     </div>
     <div class="container mt-5">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="image cursor-pointer">
-            <img
-              src="assets/imgs/port1.png"
-              id="cardImage"
-              class="w-100 rounded-3"
-              alt=""
-            />
-            <div class="layer rounded-3">
-              <i class="fa-solid fa-plus plus"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="image cursor-pointer">
-            <img
-              src="assets/imgs/port2.png"
-              id="cardImage"
-              class="w-100 rounded-3"
-              alt=""
-            />
-            <div class="layer rounded-3">
-              <i class="fa-solid fa-plus plus"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="image cursor-pointer">
-            <img
-              src="assets/imgs/port3.png"
-              id="cardImage"
-              class="w-100 rounded-3"
-              alt=""
-            />
-            <div class="layer rounded-3">
-              <i class="fa-solid fa-plus plus"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="image cursor-pointer">
-            <img
-              src="assets/imgs/port1.png"
-              id="cardImage"
-              class="w-100 rounded-3"
-              alt=""
-            />
-            <div class="layer rounded-3">
-              <i class="fa-solid fa-plus plus"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="image cursor-pointer">
-            <img
-              src="assets/imgs/port2.png"
-              id="cardImage"
-              class="w-100 rounded-3"
-              alt=""
-            />
-            <div class="layer rounded-3">
-              <i class="fa-solid fa-plus plus"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="image cursor-pointer">
-            <img
-              src="assets/imgs/port3.png"
-              id="cardImage"
-              class="w-100 rounded-3"
-              alt=""
-            />
-            <div class="layer rounded-3">
-              <i class="fa-solid fa-plus plus"></i>
+      <div class="row">
+        <div class="col-md-4 g-4" *ngFor="let img of imgs; let i = index">
+          <div class="images rounded-2 overflow-hidden position-relative">
+            <img [src]="img" alt="" class="w-100" />
+            <div
+              class="layer d-flex align-items-center justify-content-center"
+              (click)="showImage(i)"
+            >
+              <i class="fa-solid fa-plus fa-2xl" style="color: #ffffff"></i>
             </div>
           </div>
         </div>
       </div>
+      <div class="contain bg-primary bg-opacity-25 d-none"></div>
     </div>
   </div>
   <div class="card position-absolute d-none" id="cardShow">\ das</div>
+  <div
+    class="contain bg-success bg-opacity-25"
+    *ngIf="userClick"
+    (click)="hideContain($event)"
+  >
+    <img [src]="imgSrc" alt="" />
+  </div>
 </div>
